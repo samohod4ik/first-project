@@ -1,4 +1,4 @@
-from itertools import groupby
+from itertools import groupby, dropwhile
 
 
 def ranges(numbers):
@@ -14,3 +14,9 @@ def group_anagrams(words):
     key = lambda x: sum(ord(i) for i in x)
     for group in groupby(sorted(words, key=key), key=key):
         yield tuple(group[1])
+
+
+def first_largest(iterable, number):
+    for i, n in dropwhile(lambda x: x[1] <= number, enumerate(iterable)):
+        return i
+    return -1
