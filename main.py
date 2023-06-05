@@ -11,3 +11,4 @@ if __name__ == '__main__':
 
     iterator = iter([18, 21, 14, 72, 73, 18, 20])
     print(first_largest(iterator, 10))
+    print("Hello world!")

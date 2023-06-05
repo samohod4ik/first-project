@@ -20,3 +20,8 @@ def first_largest(iterable, number):
     for i, n in dropwhile(lambda x: x[1] <= number, enumerate(iterable)):
         return i
     return -1
+
+
+if __name__ == '__main__':
+    pass
+
